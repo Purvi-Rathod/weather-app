@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather App</title>
+  <title>Weather App with Min/Max Temp Chart</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -14,7 +15,10 @@
         <input type="text" id="cityInput" placeholder="Enter any city" />
         <button onclick="getWeather()">Get Weather</button>
       </div>
-      <div class="result-box" id="resultBox"></div>
+      <div class="content-box">
+        <div class="result-box" id="resultBox"></div>
+        <canvas id="tempChart" width="400" height="200"></canvas>
+      </div>
     </div>
   </div>
   <script src="script.js"></script>
